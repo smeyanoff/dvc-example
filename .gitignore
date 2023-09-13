@@ -1,0 +1,7 @@
+# poetry 
+poetry.lock
+.venv
+
+# cache
+__pycache__
+/.env
