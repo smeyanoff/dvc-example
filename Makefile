@@ -5,3 +5,6 @@ prepare_stage2:
 	poetry run python src/data/data_prepare.py
 
 data_prepare: prepare_stage1 prepare_stage2
+
+training:
+	poetry run python src/models/model_train.py

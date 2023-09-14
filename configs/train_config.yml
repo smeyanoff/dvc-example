@@ -1,0 +1,4 @@
+train_config:
+    seed: 1
+    test_size: 0.5
+    validation_size: 0.1

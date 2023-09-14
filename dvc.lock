@@ -1,0 +1,10 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: configs
+    deps:
+    - path: configs
+      hash: md5
+      md5: 943d8d70650924fd10e15eeb40351107.dir
+      size: 70
+      nfiles: 1
