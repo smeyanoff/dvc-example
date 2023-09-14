@@ -8,3 +8,27 @@ stages:
       md5: 943d8d70650924fd10e15eeb40351107.dir
       size: 70
       nfiles: 1
+  data_prepare:
+    cmd: poetry run python src/data/data_prepare.py
+    deps:
+    - path: src/data/data_prepare.py
+      hash: md5
+      md5: 55e9b3eb110bfcab2c50ca8763eced5a
+      size: 670
+    outs:
+    - path: data/prepared_data/prepared_data.csv
+      hash: md5
+      md5: 784e0f7d2170fbfde1f9d53e118872d5
+      size: 85885
+  training:
+    cmd: poetry run python src/models/model_train.py
+    deps:
+    - path: src/models/model_train.py
+      hash: md5
+      md5: 2e92ab1120fce89ea7eb6f17a15321f9
+      size: 1967
+    outs:
+    - path: models/linear_model.pickle
+      hash: md5
+      md5: 772119d5a22162f0c85b4e52bd6cb01a
+      size: 904

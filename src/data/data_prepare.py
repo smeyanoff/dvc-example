@@ -10,7 +10,7 @@ def fillna(dataset: pd.DataFrame) -> pd.DataFrame:
     prepare_dataset = dataset.copy()
     for i, column in enumerate(dataset.columns):
         if i % 2 == 0:
-            prepare_dataset[column] = prepare_dataset[column] + 1
+            prepare_dataset[column] = prepare_dataset[column] + 5
         else:
             prepare_dataset[column] = prepare_dataset[column] - 4
     
