@@ -32,3 +32,19 @@ stages:
       hash: md5
       md5: 772119d5a22162f0c85b4e52bd6cb01a
       size: 904
+  data_download:
+    cmd: poetry run python src/data/data_download.py
+    deps:
+    - path: src/data/data_download.py
+      hash: md5
+      md5: 5c8213c19cdeef16f056e42b863b54c6
+      size: 535
+    outs:
+    - path: data/initial_data/initial_data.csv
+      hash: md5
+      md5: 53f8aab5e42ac4132c1a086fe22bdef2
+      size: 94310
+    - path: data/initial_data/target.csv
+      hash: md5
+      md5: 4072cb821028caaa53b4cfcb3b9f3f3a
+      size: 4171

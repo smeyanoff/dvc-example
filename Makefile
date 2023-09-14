@@ -1,6 +1,6 @@
 prepare_dirs:
 	mkdir -p data/initial_data
-	mkdir data/prepared_data
+	mkdir -p data/prepared_data
 
 prepare_stage1:
 	poetry run python src/data/data_download.py

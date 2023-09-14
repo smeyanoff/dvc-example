@@ -1,18 +1,21 @@
 # Type dvc-help in this file and hit enter to get more information on how the extension can help to setup pipelines
 stages:
+  data_download:
+    cmd:  poetry run python src/data/data_download.py
+    deps:
+      - src/data/data_download.py
+    outs:
+      - data/initial_data/initial_data.csv
+      - data/initial_data/target.csv
   data_prepare:
     cmd: poetry run python src/data/data_prepare.py
     deps:
-    - src/data/data_prepare.py
-    - data/prepared_data
-    - data/initial_data
+      - src/data/data_prepare.py
     outs:
-    - data/prepared_data/prepared_data.csv
+      - data/prepared_data/prepared_data.csv
   training:
     cmd: poetry run python src/models/model_train.py
     deps:
-    - src/models/model_train.py
-    - data/initial_data/target.csv
-    - data/prepared_data/prepared_data.csv
+      - src/models/model_train.py
     outs:
-    - models/linear_model.pickle
+      - models/linear_model.pickle
